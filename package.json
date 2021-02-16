@@ -1,0 +1,69 @@
+{
+  "name": "github-action-quotes",
+  "version": "1.0.0",
+  "description": "Automatically provides SVG chart images by input json source",
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write **/*.js",
+    "format:check": "prettier --check **/*.js",
+    "prepublish": "node_modules\\.bin\\ncc build index.js -m -o dist",
+    "postpublish": "npm run clean",
+    "lint:editorconfig": "editorconfig-checker -exclude \\.yml$",
+    "start:action": "npm run prepublish && node dist/index.js",
+    "lint": "eslint --fix --quiet -f codeframe --ext js .",
+    "lint:staged": "lint-staged --no-stash --allow-empty",
+    "test": "TZ=utc jest",
+    "test:coverage": "jest --collectCoverage",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.6"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "~>0.27.0",
+    "babel-eslint": "^10.1.0",
+    "editorconfig-checker": "3.3.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-github": "^4.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "expect": "^26.6.2",
+    "husky": "^4.2.5",
+    "jest": "^27.0.0-next.2",
+    "jest-circus": "^26.6.3",
+    "lint-staged": "^10.1.6",
+    "pretty-quick": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexRogalskiy/github-action-quotes.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "keywords": [
+    "github-actions",
+    "styled quotes",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/AlexRogalskiy/github-action-quotes/issues"
+  },
+  "homepage": "https://github.com/AlexRogalskiy/github-action-quotes",
+  "author": {
+    "name": "Alexander Rogalskiy",
+    "url": "https://github.com/AlexRogalskiy"
+  },
+  "browser": {
+    "fs": false
+  },
+  "funding": "https://github.com/sponsors/AlexRogalskiy"
+}
