@@ -29,15 +29,23 @@ async function createSnapshot(url, filePath, fileName, fileExtension) {
 }
 
 async function run() {
-  const url = core.getInput('url');
+  const category = core.getInput('category');
+  const pattern = core.getInput('pattern');
   const width = notBlankOrElse(core.getInput('width'), config.width);
   const height = notBlankOrElse(core.getInput('height'), config.height);
+
+  const backgroundColor = notBlankOrElse(core.getInput('backgroundColor'), config.backgroundColor);
+  const fontColor = notBlankOrElse(core.getInput('fontColor'), config.fontColor);
+  const opacity = notBlankOrElse(core.getInput('opacity'), config.opacity);
+  const colorPattern = notBlankOrElse(core.getInput('colorPattern'), config.colorPattern);
+
+  let target = `${config.url}?category=${category}&pattern=${pattern}&width=${width}&height=${height}`;
+  target = `${target}&backgroundColor=${backgroundColor}&fontColor=${fontColor}`;
+  target = `${target}&opacity=${opacity}&colorPattern=${colorPattern}`;
 
   const fileName = notBlankOrElse(core.getInput('name'), config.name);
   const filePath = notBlankOrElse(core.getInput('path'), config.path);
   const fileExtension = notBlankOrElse(core.getInput('extension'), config.extension);
-
-  const target = `${config.url}?url=${url}&width=${width}&height=${height}`;
 
   const imagePath = await createSnapshot(target, filePath, fileName, fileExtension);
 
