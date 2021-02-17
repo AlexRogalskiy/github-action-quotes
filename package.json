@@ -14,7 +14,7 @@
     "start:action": "npm run prepublish && node dist/index.js",
     "lint": "eslint --fix --quiet -f codeframe --ext js .",
     "lint:staged": "lint-staged --no-stash --allow-empty",
-    "semantic-release": "semantic-release",
+    "semantic-release": "node_modules/bin/semantic-release",
     "commit": "git-cz",
     "test:folio": "folio tests/spec/",
     "test": "TZ=utc jest",
