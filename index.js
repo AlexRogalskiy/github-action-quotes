@@ -8,9 +8,9 @@ const fs = require('fs');
 const config = require('./src/config');
 const { notBlankOrElse } = require('./src/utils');
 
-async function createSnapshot(url, filePath, fileName, fileExtension) {
+async function createSnapshot(url, filePath, fileName) {
   try {
-    const imagePath = path.join(filePath, `${fileName}.${fileExtension}`);
+    const imagePath = path.join(filePath, `${fileName}.${config.extension}`);
     console.log(`Generating screenshot with parameters: url=${url}, file=${imagePath}\n`);
 
     if (!fs.existsSync(filePath)) {
@@ -39,15 +39,14 @@ async function run() {
   const opacity = notBlankOrElse(core.getInput('opacity'), config.opacity);
   const colorPattern = notBlankOrElse(core.getInput('colorPattern'), config.colorPattern);
 
+  const fileName = notBlankOrElse(core.getInput('name'), config.name);
+  const filePath = notBlankOrElse(core.getInput('path'), config.path);
+
   let target = `${config.url}?category=${category}&pattern=${pattern}&width=${width}&height=${height}`;
   target = `${target}&backgroundColor=${backgroundColor}&fontColor=${fontColor}`;
   target = `${target}&opacity=${opacity}&colorPattern=${colorPattern}`;
 
-  const fileName = notBlankOrElse(core.getInput('name'), config.name);
-  const filePath = notBlankOrElse(core.getInput('path'), config.path);
-  const fileExtension = notBlankOrElse(core.getInput('extension'), config.extension);
-
-  const imagePath = await createSnapshot(target, filePath, fileName, fileExtension);
+  const imagePath = await createSnapshot(target, filePath, fileName);
 
   core.setOutput('image', imagePath);
 }

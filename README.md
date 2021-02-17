@@ -1,6 +1,6 @@
 # _Styled quotes_
 
-[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub--graph-quotes-blue?logo=github)](https://github.com/marketplace/actions/graph-quotes)
+[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub--web-quotes-blue?logo=github)](https://github.com/marketplace/actions/web-quotes)
 
 [![management: perfekt👌](https://img.shields.io/badge/management-perfekt👌-red.svg)](https://github.com/lekterable/perfekt)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -77,53 +77,67 @@ Creates styled quotes by category and input color parameters.
 
 ## _Inputs_
 
-### `url`
+### `category` 
 
-**Required** Target url with json data source.
+**Optional** Quote's category (default **random**)
 
-### `name`
+### `pattern`
 
-**Optional** Graph chart image name (default **demo**)
-
-### `path`
-
-**Optional** Graph chart image path (default **images**)
-
-### `extension`
-
-**Optional** Graph chart image extension (default **svg**)
+**Optional** Quote's image background pattern (default **random**)
 
 ### `width`
 
-**Optional** Graph chart image width (default **1024**)
+**Optional** Quote's image width (default **100%**)
 
 ### `height`
 
-**Optional** Graph chart image height (default **768**)
+**Optional** Quote's image height (default **100%**)
 
-## _Outputs_
+### `backgroundColor`
+
+**Optional** Quote's image background color (default **%23FFFFFF**)
+
+### `fontColor`
+
+**Optional** Quote's image font color (default **%230A83DC**)
+
+### `opacity`
+
+**Optional** Quote's image background opacity (default **0.3**)
+
+### `colorPattern`
+
+**Optional** Quote's image text color (default **%23FFE0E9**)
+
+### `name`
+
+**Optional** Quote's image name (default **quote**)
+
+### `path`
+
+**Optional** Quote's image path (default **images**)
+
+## _Outputs_`
 
 ### `image`
 
-Generated graph chart image (stored in the root directory)
+Generated quote image (stored in the `path` directory)
 
 ## _Examples_
 
 ```yml
-- name: Create graph quotes
+- name: Create styled quotes
   uses: alexrogalskiy/github-action-quotes@master
   with:
     category: 'programming'
-    name: 'chart'
+    pattern: 'wiggle'
+    name: 'quote'
     path: 'images'
-    extension: 'svg'
-    width: 400
-    height: 400
 ```
 
 Running locally:
 
-- `npm run start:action --action github-action-quotes --category 'programming' --name chart-name --extension svg --width 400 --height 400`
+- `npm run start:action --action github-action-quotes --category 'programming' --pattern 'wiggle' --name quote --path images`
 
 ## _Visitor stats_
 
