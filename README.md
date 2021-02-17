@@ -1,6 +1,6 @@
 # _Styled quotes_
 
-[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub-graph--quotes-blue?logo=github)](https://github.com/marketplace/actions/graph-quotes)
+[![GitHub marketplace](https://img.shields.io/badge/marketplacegithub-styled--quotes-blue?logo=github)](https://github.com/marketplace/actions/styled-quotes)
 
 [![management: perfekt👌](https://img.shields.io/badge/management-perfekt👌-red.svg)](https://github.com/lekterable/perfekt)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
