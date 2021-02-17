@@ -13,21 +13,21 @@ commands:
       - run:
           name: "Update Node.js and npm"
           command: |
-            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
+            curl -sSL "https://nodejs.org/dist/v12.0.0/node-v12.0.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v12.0.0-linux-x64/bin/node
             curl https://www.npmjs.com/install.sh | sudo bash
       - run:
           name: Check current version of node
           command: node -v
       - restore_cache:
           name: Restore node_modules cache
-          key: github-action-quotes-{{ checksum "yarn.lock" }}-{{ .Branch }}
+          key: github-action-branch-mapper-{{ checksum "yarn.lock" }}-{{ .Branch }}
 
   save_env_cache:
     description: Saves environment cache
     steps:
       - save_cache:
           name: Save node_modules cache
-          key: github-action-quotes-{{ checksum "yarn.lock" }}-{{ .Branch }}
+          key: github-action-branch-mapper-{{ checksum "yarn.lock" }}-{{ .Branch }}
           paths:
             - node_modules/
 
@@ -37,7 +37,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - prep_env
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
       - save_env_cache
 
   publish_release:
