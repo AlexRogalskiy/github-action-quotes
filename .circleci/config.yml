@@ -10,11 +10,11 @@ commands:
     steps:
       - checkout:
           path: ~/repo
-      - run:
-          name: 'Update Node.js and npm'
-          command: |
-            curl -sSL "https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v12.13.0-linux-x64/bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
+      #      - run:
+      #          name: 'Update Node.js and npm'
+      #          command: |
+      #            curl -sSL "https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v12.13.0-linux-x64/bin/node
+      #            curl https://www.npmjs.com/install.sh | sudo bash
       - run:
           name: Check current version of node
           command: node -v
@@ -52,7 +52,7 @@ jobs:
             package.json.tmp package.json
       - run:
           name: Semantic release to NPM and GitHub releases
-          command: npm run semantic-release || true
+          command: npx -p @semantic-release/commit-analyzer -p @semantic-release/release-notes-generator -p @semantic-release/changelog -p @semantic-release/npm -p @semantic-release/git semantic-release
 
 workflows:
   version: 2
