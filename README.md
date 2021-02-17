@@ -73,7 +73,7 @@
     </a>
 </p>
 
-Creates styled graph quotes by category and input color parameters.
+Creates styled quotes by category and input color parameters.
 
 ## _Inputs_
 

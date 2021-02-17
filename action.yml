@@ -1,5 +1,5 @@
 name: 'Styled quotes'
-description: 'Create styled graph quotes by category and input color parameters'
+description: 'Create styled quotes by category and input color parameters'
 author: 'AlexRogalskiy'
 
 inputs:
