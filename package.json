@@ -49,7 +49,6 @@
     "jest": "^27.0.0-next.2",
     "jest-circus": "^26.6.3",
     "lint-staged": "^10.1.6",
-    "marked": "<2.0.0",
     "pretty-quick": "^3.1.0",
     "semantic-release": "^15.10.5"
   },
@@ -71,7 +70,6 @@
   "release": {
     "tagFormat": "v${version}",
     "plugins": [
-      "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/npm",
       "@semantic-release/git"
