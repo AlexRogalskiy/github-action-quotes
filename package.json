@@ -27,6 +27,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "^7.2.0",
     "@semantic-release/npm": "^7.0.10",
     "@semantic-release/release-notes-generator": "^9.0.1",
@@ -68,21 +69,24 @@
   ],
   "release": {
     "tagFormat": "v${version}",
-    "verifyConditions": [
-      "@semantic-release/changelog",
-      "@semantic-release/github",
-      "@semantic-release/npm"
-    ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm"
-    ],
-    "publish": [
-      "@semantic-release/github",
-      "@semantic-release/npm"
-    ],
-    "fail": [
-      "@semantic-release/github"
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "docs/CHANGELOG.md"
+          ]
+        }
+      ]
     ]
   },
   "bugs": {
