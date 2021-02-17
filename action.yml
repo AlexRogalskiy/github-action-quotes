@@ -6,27 +6,27 @@ inputs:
   category:
     description: 'quotes category'
     required: false
-    default: random
+    default: 'random'
   pattern:
     description: 'quotes image background pattern'
     required: false
-    default: random
+    default: 'random'
   width:
     description: 'quotes image width'
     required: false
-    default: 100%
+    default: '100%'
   height:
     description: 'quotes image height'
     required: false
-    default: 100%
+    default: '100%'
   backgroundColor:
     description: 'quotes image background color'
     required: false
-    default: %23FFFFFF
+    default: '%23FFFFFF'
   fontColor:
     description: 'quotes image font color'
     required: false
-    default: %230A83DC
+    default: '%230A83DC'
   opacity:
     description: 'quotes image background opacity'
     required: false
@@ -34,15 +34,15 @@ inputs:
   colorPattern:
     description: 'quotes image text color'
     required: false
-    default: %23FFE0E9
+    default: '%23FFE0E9'
   name:
     description: 'quotes image name'
     required: false
-    default: quote
+    default: 'quote'
   path:
     description: 'quotes image path'
     required: false
-    default: images
+    default: 'images'
 
 outputs:
   image:
