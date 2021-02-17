@@ -2600,9 +2600,9 @@
       }
     },
     "@semantic-release/commit-analyzer": {
-      "version": "6.3.3",
-      "resolved": "https://registry.npmjs.org/@semantic-release/commit-analyzer/-/commit-analyzer-6.3.3.tgz",
-      "integrity": "sha512-Pyv1ZL2u5AIOY4YbxFCAB5J1PEh5yON8ylbfiPiriDGGW6Uu1U3Y8lysMtWu+FUD5x7tSnyIzhqx0+fxPxqbgw==",
+      "version": "8.0.1",
+      "resolved": "https://registry.npmjs.org/@semantic-release/commit-analyzer/-/commit-analyzer-8.0.1.tgz",
+      "integrity": "sha512-5bJma/oB7B4MtwUkZC2Bf7O1MHfi4gWe4mA+MIQ3lsEV0b422Bvl1z5HRpplDnMLHH3EXMoRdEng6Ds5wUqA3A==",
       "dev": true,
       "requires": {
         "conventional-changelog-angular": "^5.0.0",
@@ -2610,7 +2610,8 @@
         "conventional-commits-parser": "^3.0.7",
         "debug": "^4.0.0",
         "import-from": "^3.0.0",
-        "lodash": "^4.17.4"
+        "lodash": "^4.17.4",
+        "micromatch": "^4.0.2"
       },
       "dependencies": {
         "debug": {
@@ -2787,9 +2788,9 @@
       }
     },
     "@semantic-release/release-notes-generator": {
-      "version": "7.3.5",
-      "resolved": "https://registry.npmjs.org/@semantic-release/release-notes-generator/-/release-notes-generator-7.3.5.tgz",
-      "integrity": "sha512-LGjgPBGjjmjap/76O0Md3wc04Y7IlLnzZceLsAkcYRwGQdRPTTFUJKqDQTuieWTs7zfHzQoZqsqPfFxEN+g2+Q==",
+      "version": "9.0.1",
+      "resolved": "https://registry.npmjs.org/@semantic-release/release-notes-generator/-/release-notes-generator-9.0.1.tgz",
+      "integrity": "sha512-bOoTiH6SiiR0x2uywSNR7uZcRDl22IpZhj+Q5Bn0v+98MFtOMhCxFhbrKQjhbYoZw7vps1mvMRmFkp/g6R9cvQ==",
       "dev": true,
       "requires": {
         "conventional-changelog-angular": "^5.0.0",
@@ -16521,6 +16522,20 @@
             "@types/node": ">= 8"
           }
         },
+        "@semantic-release/commit-analyzer": {
+          "version": "6.3.3",
+          "resolved": "https://registry.npmjs.org/@semantic-release/commit-analyzer/-/commit-analyzer-6.3.3.tgz",
+          "integrity": "sha512-Pyv1ZL2u5AIOY4YbxFCAB5J1PEh5yON8ylbfiPiriDGGW6Uu1U3Y8lysMtWu+FUD5x7tSnyIzhqx0+fxPxqbgw==",
+          "dev": true,
+          "requires": {
+            "conventional-changelog-angular": "^5.0.0",
+            "conventional-commits-filter": "^2.0.0",
+            "conventional-commits-parser": "^3.0.7",
+            "debug": "^4.0.0",
+            "import-from": "^3.0.0",
+            "lodash": "^4.17.4"
+          }
+        },
         "@semantic-release/github": {
           "version": "5.5.8",
           "resolved": "https://registry.npmjs.org/@semantic-release/github/-/github-5.5.8.tgz",
@@ -16563,6 +16578,24 @@
             "read-pkg": "^5.0.0",
             "registry-auth-token": "^4.0.0",
             "tempy": "^0.3.0"
+          }
+        },
+        "@semantic-release/release-notes-generator": {
+          "version": "7.3.5",
+          "resolved": "https://registry.npmjs.org/@semantic-release/release-notes-generator/-/release-notes-generator-7.3.5.tgz",
+          "integrity": "sha512-LGjgPBGjjmjap/76O0Md3wc04Y7IlLnzZceLsAkcYRwGQdRPTTFUJKqDQTuieWTs7zfHzQoZqsqPfFxEN+g2+Q==",
+          "dev": true,
+          "requires": {
+            "conventional-changelog-angular": "^5.0.0",
+            "conventional-changelog-writer": "^4.0.0",
+            "conventional-commits-filter": "^2.0.0",
+            "conventional-commits-parser": "^3.0.0",
+            "debug": "^4.0.0",
+            "get-stream": "^5.0.0",
+            "import-from": "^3.0.0",
+            "into-stream": "^5.0.0",
+            "lodash": "^4.17.4",
+            "read-pkg-up": "^7.0.0"
           }
         },
         "agent-base": {

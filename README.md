@@ -23,6 +23,7 @@
 [![NewReleases](https://newreleases.io/badge.svg)](https://newreleases.io/github/AlexRogalskiy/github-action-quotes)
 [![Hits-of-Code](https://hitsofcode.com/github/alexrogalskiy/github-action-quotes?branch=master)](https://hitsofcode.com/github/alexrogalskiy/github-action-quotes?branch=master/view?branch=master)
 ![CI](https://github.com/AlexRogalskiy/github-action-quotes/workflows/CI/badge.svg)
+[![CircleCI](https://circleci.com/gh/AlexRogalskiy/github-action-quotes.svg?style=shield)](https://circleci.com/gh/AlexRogalskiy/github-action-quotes)
 
 <!--[![codecov](https://codecov.io/gh/AlexRogalskiy/github-action-quotes/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexRogalskiy/github-action-quotes)-->
 

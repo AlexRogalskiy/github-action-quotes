@@ -52,7 +52,7 @@ jobs:
             package.json.tmp package.json
       - run:
           name: Semantic release to NPM and GitHub releases
-          command: npm run semantic-release
+          command: npx -p @semantic-release/changelog -p @semantic-release/github -p @semantic-release/npm -p semantic-release semantic-release
 
 workflows:
   version: 2
