@@ -25,6 +25,9 @@
     "@actions/core": "^1.2.6"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/github": "^7.2.0",
+    "@semantic-release/npm": "^7.0.10",
     "@vercel/ncc": "~>0.27.0",
     "babel-eslint": "^10.1.0",
     "cz-conventional-changelog": "^3.3.0",
@@ -61,6 +64,25 @@
     "styled quotes",
     "javascript"
   ],
+  "release": {
+    "tagFormat": "v${version}",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm"
+    ],
+    "publish": [
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ],
+    "fail": [
+      "@semantic-release/github"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/AlexRogalskiy/github-action-quotes/issues"
   },
