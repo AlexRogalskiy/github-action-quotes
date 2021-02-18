@@ -17,7 +17,7 @@ async function createSnapshot(url, filePath, fileName) {
       fs.mkdirSync(filePath);
     }
 
-    const image = fs.createWriteStream(imagePath);
+    const image = await fs.createWriteStream(imagePath);
     await http.get(url, resp => {
       resp.pipe(image);
     });
@@ -42,7 +42,8 @@ async function run() {
   const fileName = notBlankOrElse(core.getInput('name'), config.name);
   const filePath = notBlankOrElse(core.getInput('path'), config.path);
 
-  let target = `${config.url}?category=${category}&pattern=${pattern}&width=${width}&height=${height}`;
+  let target = `${config.url}?category=${category}&pattern=${pattern}`;
+  target = `${target}&width=${encodeURIComponent(width)}&height=${encodeURIComponent(height)}`;
   target = `${target}&backgroundColor=${backgroundColor}&fontColor=${fontColor}`;
   target = `${target}&opacity=${opacity}&colorPattern=${colorPattern}`;
 
