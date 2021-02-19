@@ -28,6 +28,7 @@
 
 <!--[![codecov](https://codecov.io/gh/AlexRogalskiy/github-action-quotes/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexRogalskiy/github-action-quotes)-->
 
+[![GitHub Super-Linter](https://github.com/AlexRogalskiy/github-action-quotes/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![ComVer](https://img.shields.io/badge/ComVer-compliant-brightgreen.svg)][repo]
 [![Public workflows that use this action.][total_usages]][search_results]
@@ -36,31 +37,16 @@
 ## _Table of contents_
 
 <!--ts-->
-   * [<em>Styled quotes</em>](#styled-quotes)
-      * [<em>Table of contents</em>](#table-of-contents)
-      * [<em>Description</em>](#description)
-      * [<em>Inputs</em>](#inputs)
-         * [category](#category)
-         * [pattern](#pattern)
-         * [width](#width)
-         * [height](#height)
-         * [backgroundColor](#backgroundcolor)
-         * [fontColor](#fontcolor)
-         * [opacity](#opacity)
-         * [colorPattern](#colorpattern)
-         * [name](#name)
-         * [path](#path)
-      * [<em>Outputs</em>`](#outputs)
-         * [image](#image)
-      * [<em>Examples</em>](#examples)
-      * [<em>Visitor stats</em>](#visitor-stats)
-      * [<em>Licensing</em>](#licensing)
-      * [<em>Authors</em>](#authors)
-      * [<em>Versioning</em>](#versioning)
-      * [<em>Contribution</em>](#contribution)
-      * [<em>Acknowledgement</em>](#acknowledgement)
-      * [<em>Forks</em>](#forks)
-      * [<em>Development Support</em>](#development-support)
+
+- [<em>Styled quotes</em>](#styled-quotes) _ [<em>Table of contents</em>](#table-of-contents) _
+[<em>Description</em>](#description) _ [<em>Inputs</em>](#inputs) _ [category](#category) _
+[pattern](#pattern) _ [width](#width) _ [height](#height) _ [backgroundColor](#backgroundcolor) _
+[fontColor](#fontcolor) _ [opacity](#opacity) _ [colorPattern](#colorpattern) _ [name](#name) _ [path](#path)
+_ [<em>Outputs</em>`](#outputs) _ [image](#image) _ [<em>Examples</em>](#examples) _
+[<em>Visitor stats</em>](#visitor-stats) _ [<em>Licensing</em>](#licensing) _ [<em>Authors</em>](#authors) _
+[<em>Versioning</em>](#versioning) _ [<em>Contribution</em>](#contribution) _
+[<em>Acknowledgement</em>](#acknowledgement) _ [<em>Forks</em>](#forks) _
+[<em>Development Support</em>](#development-support)
 <!--te-->
 
 ## _Description_
@@ -84,7 +70,7 @@ Creates styled quotes by category and input color parameters.
 
 ## _Inputs_
 
-### `category` 
+### `category`
 
 **Optional** Quote's category (default **random**)
 
@@ -181,9 +167,11 @@ this repository][tags].
 
 Please read
 [CONTRIBUTING.md](https://github.com/AlexRogalskiy/github-action-quotes/blob/master/.github/CONTRIBUTING.md)
-for details on our code of conduct, and the process for submitting pull requests to us ([emoji key](https://allcontributors.org/docs/en/emoji-key)).
+for details on our code of conduct, and the process for submitting pull requests to us
+([emoji key](https://allcontributors.org/docs/en/emoji-key)).
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind are welcome!
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![Github contributors](https://img.shields.io/github/all-contributors/AlexRogalskiy/github-action-quotes)
@@ -212,16 +200,17 @@ Like _**Styled Code Formats**_ ? Consider buying me a coffee :\)
 [![forthebadge](https://img.shields.io/badge/powered%20by-%20github-7116FB.svg?logo=github&style=for-the-badge)](https://github.com/)
 [![forthebadge](https://img.shields.io/badge/build%20with-%20%E2%9D%A4-B6FF9B.svg?logo=heart&style=for-the-badge)](https://forthebadge.com/)
 
-
-  [repo]:               https://github.com/AlexRogalskiy/github-action-quotes
-  [tags]:               https://github.com/AlexRogalskiy/github-action-quotes/tags
-  [issues]:             https://github.com/AlexRogalskiy/github-action-quotes/issues
-  [pulls]:              https://github.com/AlexRogalskiy/github-action-quotes/pulls
-  [wiki]:               https://github.com/AlexRogalskiy/github-action-quotes/wiki
-  [stars]:              https://github.com/AlexRogalskiy/github-action-quotes/stargazers
-  [forkers]:            https://github.com/AlexRogalskiy/github-action-quotes/network/members
-  [contributors]:       https://github.com/AlexRogalskiy/github-action-quotes/graphs/contributors
-  [license_id]:         https://img.shields.io/github/license/AlexRogalskiy/github-action-quotes
-  [license_content]:    https://github.com/AlexRogalskiy/github-action-quotes/blob/master/LICENSE
-  [total_usages]:       https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-git-master.endbug.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3DAlexRogalskiy%2Fgithub-action-quotes%26badge%3Dtrue
-  [search_results]:     https://github.com/search?o=desc&q=AlexRogalskiy/github-action-quotes+path%3A.github%2Fworkflows+language%3AYAML&s=&type=Code
+[repo]: https://github.com/AlexRogalskiy/github-action-quotes
+[tags]: https://github.com/AlexRogalskiy/github-action-quotes/tags
+[issues]: https://github.com/AlexRogalskiy/github-action-quotes/issues
+[pulls]: https://github.com/AlexRogalskiy/github-action-quotes/pulls
+[wiki]: https://github.com/AlexRogalskiy/github-action-quotes/wiki
+[stars]: https://github.com/AlexRogalskiy/github-action-quotes/stargazers
+[forkers]: https://github.com/AlexRogalskiy/github-action-quotes/network/members
+[contributors]: https://github.com/AlexRogalskiy/github-action-quotes/graphs/contributors
+[license_id]: https://img.shields.io/github/license/AlexRogalskiy/github-action-quotes
+[license_content]: https://github.com/AlexRogalskiy/github-action-quotes/blob/master/LICENSE
+[total_usages]:
+  https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-git-master.endbug.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3DAlexRogalskiy%2Fgithub-action-quotes%26badge%3Dtrue
+[search_results]:
+  https://github.com/search?o=desc&q=AlexRogalskiy/github-action-quotes+path%3A.github%2Fworkflows+language%3AYAML&s=&type=Code
