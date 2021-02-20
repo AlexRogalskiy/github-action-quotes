@@ -9,23 +9,19 @@ const config = require('./src/config');
 const { notBlankOrElse } = require('./src/utils');
 
 async function createSnapshot(url, filePath, fileName) {
-  try {
-    const imagePath = path.join(filePath, `${fileName}.${config.extension}`);
-    console.log(`Generating screenshot with parameters: url=${url}, file=${imagePath}\n`);
+  const imagePath = path.join(filePath, `${fileName}.${config.extension}`);
+  console.log(`Generating screenshot with parameters: url=${url}, file=${imagePath}\n`);
 
-    if (!fs.existsSync(filePath)) {
-      fs.mkdirSync(filePath);
-    }
-
-    const image = await fs.createWriteStream(imagePath);
-    await http.get(url, resp => {
-      resp.pipe(image);
-    });
-
-    return imagePath;
-  } catch (e) {
-    console.error(e);
+  if (!fs.existsSync(filePath)) {
+    fs.mkdirSync(filePath);
   }
+
+  const image = await fs.createWriteStream(imagePath);
+  await http.get(url, resp => {
+    resp.pipe(image);
+  });
+
+  return imagePath;
 }
 
 async function run() {
@@ -47,9 +43,13 @@ async function run() {
   target = `${target}&backgroundColor=${backgroundColor}&fontColor=${fontColor}`;
   target = `${target}&opacity=${opacity}&colorPattern=${colorPattern}`;
 
-  const imagePath = await createSnapshot(target, filePath, fileName);
-
-  core.setOutput('image', imagePath);
+  try {
+    const imagePath = await createSnapshot(target, filePath, fileName);
+    core.info(`Storing quote image by path: ${imagePath}`);
+    core.setOutput('image', imagePath);
+  } catch (e) {
+    core.setFailed(`Cannot create quote image by path: ${filePath}/${fileName}, message: ${e.message}`);
+  }
 }
 
 module.exports = run;
