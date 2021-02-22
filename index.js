@@ -8,9 +8,9 @@ const fs = require('fs');
 const config = require('./src/config');
 const { notBlankOrElse } = require('./src/utils');
 
-async function createSnapshot(url, filePath, fileName) {
+async function createImageBy(url, filePath, fileName) {
   const imagePath = path.join(filePath, `${fileName}.${config.extension}`);
-  console.log(`Generating screenshot with parameters: url=${url}, file=${imagePath}\n`);
+  console.log(`Generating image with parameters: url=${url}, file=${imagePath}\n`);
 
   if (!fs.existsSync(filePath)) {
     fs.mkdirSync(filePath);
@@ -44,7 +44,7 @@ async function run() {
   target = `${target}&opacity=${opacity}&colorPattern=${colorPattern}`;
 
   try {
-    const imagePath = await createSnapshot(target, filePath, fileName);
+    const imagePath = await createImageBy(target, filePath, fileName);
     core.info(`Storing quote image by path: ${imagePath}`);
     core.setOutput('image', imagePath);
   } catch (e) {

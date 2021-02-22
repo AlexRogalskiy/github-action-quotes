@@ -83,7 +83,7 @@
     </a>
 </p>
 
-Creates styled quotes by category and input color parameters.
+Creates _**Styled Quotes**_ by category and input color parameters.
 
 ## _Inputs_
 
@@ -205,7 +205,7 @@ See also the list of [contributors][contributors] who participated in this proje
 
 ## _Development Support_
 
-Like _**Styled Code Formats**_ ? Consider buying me a coffee :\)
+Like _**Styled Quotes**_ ? Consider buying me a coffee :\)
 
 [![Become a Patron](https://img.shields.io/badge/Become_Patron-Support_me_on_Patreon-blue.svg?style=flat-square&logo=patreon&color=e64413)](https://www.patreon.com/alexrogalskiy)
 [![Buy Me A Coffee](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-yellow.svg?logo=buy%20me%20a%20coffee)](https://www.buymeacoffee.com/AlexRogalskiy)

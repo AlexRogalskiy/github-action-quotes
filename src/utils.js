@@ -1,12 +1,5 @@
 'use strict';
 
-const createOptions = (width, height) => {
-  return {
-    shotSize: { width, height },
-    windowSize: { width, height },
-  };
-};
-
 const isNonEmptyString = str => {
   return str && str.length > 0;
 };
@@ -34,8 +27,7 @@ const objToString = obj => {
 };
 
 module.exports = {
-  createOptions,
-  toString: toFormatString,
+  toFormatString,
   isNonEmptyString,
   isBlankString,
   notBlankOrElse,
